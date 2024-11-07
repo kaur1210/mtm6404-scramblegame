@@ -1,0 +1,253 @@
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.custom-card {
+  max-width: 550px;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #353A40;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #FE6F61, #353A40);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 80px;
+  text-align: center;
+}
+
+.points-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.points-container .strikes {
+  color: #dc3545;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.points-container .points {
+  color: #28a745;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.points-container p:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .points-container {
+    font-size: 1rem;
+  }
+}
+
+.status-message {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-message.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.status-message.text-success {
+  color: #28a745;
+}
+
+.status-message.text-danger {
+  color: #dc3545;
+}
+
+.scrambled-word {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.scrambled-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 600;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.scrambled-letter:hover {
+  background-color: #f1f3f5;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-guess {
+  background-color: #FE6F61;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-guess:hover {
+  background-color: #e65d53;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-guess:focus,
+.btn-guess:active {
+  outline: none;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-skip {
+  background-color: #353A40;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-skip:hover {
+  background-color: #2e3238;
+  color: rgb(255, 230, 0);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-skip:focus,
+.btn-skip:active {
+  outline: none;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-control {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-danger {
+  font-size: 1.5rem;
+  color: #e3342f;
+}
+
+.text-muted {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 10px;
+}
+.game-over-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #343a40; 
+  color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.game-over-title {
+  color: #dc3545; 
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.game-over-points {
+  font-size: 1.25rem;
+}
+
+.game-over-points-value {
+  color: #ffc107; 
+}
+
+.play-again-button {
+  background-color: #28a745; 
+  width: 75%;
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  border-radius: 50px; 
+  box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.4);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.play-again-button:hover {
+  transform: scale(1.05); 
+}
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 2.5rem;      
+    margin-left: 55px;    
+    padding: 0.3rem;        
+  }
+}
